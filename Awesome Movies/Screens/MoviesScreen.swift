@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MoviesScreen: View {
     
-    
+    @Environment(\.managedObjectContext) private var context
     @StateObject private var modelView = MovieViewModel()
     
     
@@ -142,4 +142,5 @@ struct MoviesScreen: View {
     NavigationStack {
         MoviesScreen()
     }
+    
 }

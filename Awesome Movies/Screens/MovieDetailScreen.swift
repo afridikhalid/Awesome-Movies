@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct MovieDetailScreen: View {
+    
+    @Environment(\.managedObjectContext) private var context
+    @Environment(\.dismiss) var dismiss
     
     let movieId: Int
     @StateObject var viewModel: MovieDetailViewModel
@@ -106,10 +110,58 @@ struct MovieDetailScreen: View {
             .background(
                 .colorBackground
             )
+            .onAppear(perform: {
+                viewModel.getMovie(with: context)
+            })
+            .toolbar(.hidden, for: .tabBar)
+            .toolbar(content: {
+                ToolbarItem(placement: .topBarTrailing) {
+                    
+                    Button {
+                        // give a haptic feedback for this action
+                        feedback.impactOccurred()
+                        
+                        if viewModel.movieExists {
+                            // delete movie
+                            viewModel.deleteMovie(from: context) { success in
+                                // TODO: Handle any errors here
+                                if success {
+                                    dismiss()
+                                }
+                            }
+                            
+                        } else {
+                            // save movie
+                            viewModel.saveMovie(in: context)
+                        }
+                    } label: {
+                        
+                        Text(viewModel.movieExists ? "Delete" : "Save")
+                            .font(.footnote)
+                            .fontWeight(.bold)
+                            .padding(.top, 8)
+                            .padding(.bottom, 8)
+                            .padding(.leading, 12)
+                            .padding(.trailing, 12)
+                            .background(viewModel.movieExists ? .red.opacity(0.8) : .green.opacity(0.8))
+                            .clipShape(RoundedRectangle(cornerRadius: 12))
+                            .shadow(radius: 10)
+                            .tint(.white)
+                        
+                    }
+
+                }
+            })
+            
         } //: End of Geometery Reader
     }
 }
 
 #Preview {
-    MovieDetailScreen(movieId: 823464)
+    
+    NavigationStack {
+        MovieDetailScreen(movieId: 653346)
+    }
+    .environment(\.managedObjectContext, CoreDataProvider(inMemory: true).context)
+        
 }

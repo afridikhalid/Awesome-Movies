@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct Awesome_MoviesApp: App {
+    
+    let provider: CoreDataProvider
+    
+    init() {
+        provider = CoreDataProvider()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            MoviesScreen()
+            MainScreen()
+                .environment(\.managedObjectContext, provider.context)
         }
     }
 }
