@@ -11,7 +11,7 @@ import SwiftUI
 struct Awesome_MoviesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MoviesScreen()
         }
     }
 }
