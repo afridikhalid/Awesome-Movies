@@ -1,0 +1,219 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    " " : {
+
+    },
+    "%" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%"
+          }
+        }
+      }
+    },
+    "%dh %02d min" : {
+      "comment" : "Runtime or duration of a movie where h is hour and min is minutes and %d and %02d are place holders for the calculate duration",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$dh %2$02d min"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$dt %2$02d min"
+          }
+        }
+      }
+    },
+    "Delete" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera"
+          }
+        }
+      }
+    },
+    "Downloads" : {
+      "comment" : "Tab bar name for the downloads tab where user can view their saved movies",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nedladdningar"
+          }
+        }
+      }
+    },
+    "duration" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "tid"
+          }
+        }
+      }
+    },
+    "Empty" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tömma"
+          }
+        }
+      }
+    },
+    "Home" : {
+      "comment" : "Tab bar name for the home tab",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hem"
+          }
+        }
+      }
+    },
+    "Movies" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Filmer"
+          }
+        }
+      }
+    },
+    "Now Playing" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nu spelas"
+          }
+        }
+      }
+    },
+    "Overview" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Översikt"
+          }
+        }
+      }
+    },
+    "Popular" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Populär"
+          }
+        }
+      }
+    },
+    "rating" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "betyg"
+          }
+        }
+      }
+    },
+    "Save" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara"
+          }
+        }
+      }
+    },
+    "Save any movie from movies list then it will be available in your downloads" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara vilken film som helst från filmlistan så blir den tillgänglig i dina nedladdningar"
+          }
+        }
+      }
+    },
+    "Saved Movies" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparade filmer"
+          }
+        }
+      }
+    },
+    "Settings" : {
+      "comment" : "Tab bar name for the settings tab view / screen",
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "inställningar"
+          }
+        }
+      }
+    },
+    "Settings Screen..." : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inställningar..."
+          }
+        }
+      }
+    },
+    "Top Rated" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Topprankad"
+          }
+        }
+      }
+    },
+    "Upcoming" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kommande"
+          }
+        }
+      }
+    },
+    "year" : {
+      "localizations" : {
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "År"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -16,7 +16,7 @@ extension Int {
         let hr = self / 60
         let min = self % 60
         
-        return String(format: "%dh %02d min", hr, min)
+        return String(format: String(localized: "%dh %02d min", comment: "Runtime or duration of a movie where h is hour and min is minutes and %d and %02d are place holders for the calculate duration"), hr, min)
         
     }
     

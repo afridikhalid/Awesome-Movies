@@ -34,5 +34,5 @@ struct MovieDetailWidget: View {
 }
 
 #Preview {
-    MovieDetailWidget(title: "Year", value: "2015", systemIcon: "calendar")
+    MovieDetailWidget(title: "year", value: "2015", systemIcon: "calendar")
 }

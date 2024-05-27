@@ -144,3 +144,11 @@ struct MoviesScreen: View {
     }
     
 }
+
+// MARK: - Swedish Preview
+#Preview {
+    NavigationStack {
+        MoviesScreen()
+    }
+    .environment(\.locale, Locale(identifier: "sv"))
+}

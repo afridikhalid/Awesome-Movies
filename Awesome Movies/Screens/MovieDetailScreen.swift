@@ -68,11 +68,12 @@ struct MovieDetailScreen: View {
                         
                         
                         HStack(alignment: .center) {
-                            MovieDetailWidget(title: "year", value: viewModel.year, systemIcon: "calendar")
+                            
+                            MovieDetailWidget(title: String(localized: "year"), value: viewModel.year, systemIcon: "calendar")
                             Spacer()
-                            MovieDetailWidget(title: "duration", value: viewModel.runTime, systemIcon: "clock.arrow.2.circlepath")
+                            MovieDetailWidget(title: String(localized: "duration"), value: viewModel.runTime, systemIcon: "clock.arrow.2.circlepath")
                             Spacer()
-                            MovieDetailWidget(title: "rating", value: viewModel.ratingString, systemIcon: "star")
+                            MovieDetailWidget(title: String(localized: "rating"), value: viewModel.ratingString, systemIcon: "star")
                         }
                         .padding()
                         
@@ -163,5 +164,17 @@ struct MovieDetailScreen: View {
         MovieDetailScreen(movieId: 653346)
     }
     .environment(\.managedObjectContext, CoreDataProvider(inMemory: true).context)
+        
+}
+
+
+// MARK: - Swedish Preview
+#Preview {
+    
+    NavigationStack {
+        MovieDetailScreen(movieId: 653346)
+    }
+    .environment(\.managedObjectContext, CoreDataProvider(inMemory: true).context)
+    .environment(\.locale, Locale(identifier: "sv"))
         
 }
