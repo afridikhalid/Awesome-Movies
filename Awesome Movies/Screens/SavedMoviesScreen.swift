@@ -10,12 +10,31 @@ import SwiftUI
 /// this class is built without ViewModel since there's not a lot of complexity of data
 struct SavedMoviesScreen: View {
     
-    // fetched all saved movies, we can add sort through sort discriptors
-    // for future updates
-    @FetchRequest(sortDescriptors: [], animation: .default) private var movies: FetchedResults<SavedMovie>
+    @Environment(\.managedObjectContext) private var context
+    
+    // fetched all saved movies, now we sort it by created/saved at date so
+    // last saved movies be at the top of the list or bottom based on order
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(keyPath: \SavedMovie.createdAt, ascending: false)], animation: .default)
+    private var movies: FetchedResults<SavedMovie>
     
     
+    // MARK: - functions
+    private func deleteMovies(at offsets: IndexSet) {
+        withAnimation {
+            offsets.map { movies[$0] }.forEach(context.delete)
+            
+            do {
+                try context.save()
+            } catch {
+                // we can convert the error to NSError as well to get userInfo
+                // for more information
+                fatalError("Unresolved error: \(error.localizedDescription)")
+            }
+        }
+    }
     
+    
+    // MARK: - Body
     var body: some View {
         NavigationStack {
             Group {
@@ -26,23 +45,26 @@ struct SavedMoviesScreen: View {
                                            description: Text("Save any movie from movies list then it will be available in your downloads"))
                     
                 } else {
-                    List(movies) { movie in
-                        
-                        ZStack {
-                            
-                            SavedMovieCell(movie: movie)
-                                .backgroundStyle(.clear)
-                            NavigationLink {
-                                MovieDetailScreen(movieId: Int(movie.id))
-                                    
-                            } label: { Text(" ")}
+                    List {
+                        // To be able to implmeent .onDelete instead of iterating in ListView movied and added a ForEach so we can attach the .onDelete
+                        ForEach(movies) { movie in
+                            ZStack {
                                 
-                            .opacity(0)
-                            
+                                SavedMovieCell(movie: movie)
+                                    .backgroundStyle(.clear)
+                                NavigationLink {
+                                    MovieDetailScreen(movieId: Int(movie.id))
+                                    
+                                } label: { Text(" ")}
+                                
+                                    .opacity(0)
+                            }
                         }
+                        .onDelete(perform: deleteMovies)
+                        
                         .listRowSeparator(.hidden)
                         .listRowBackground(Color.clear)
-
+                        
                     }
                     .listStyle(.plain)
                     

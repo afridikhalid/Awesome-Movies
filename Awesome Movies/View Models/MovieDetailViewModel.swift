@@ -53,6 +53,7 @@ class MovieDetailViewModel: ObservableObject {
     func saveMovie(in context: NSManagedObjectContext) {
         guard let movieModel = movieModel else { return } // handle earror
         let movie = SavedMovie(context: context)
+        movie.createdAt = Date()
         movie.id = Int32(movieModel.id)
         movie.title = movieModel.title
         movie.overview = movieModel.overview
