@@ -139,16 +139,15 @@ struct MoviesScreen: View {
 }
 
 #Preview {
-    NavigationStack {
-        MoviesScreen()
-    }
+    
+    MoviesScreen()
+        .environment(\.managedObjectContext, CoreDataProvider.preview.context)
     
 }
 
 // MARK: - Swedish Preview
 #Preview {
-    NavigationStack {
-        MoviesScreen()
-    }
-    .environment(\.locale, Locale(identifier: "sv"))
+    MoviesScreen()
+        .environment(\.managedObjectContext, CoreDataProvider.preview.context)
+        .environment(\.locale, Locale(identifier: "sv"))
 }

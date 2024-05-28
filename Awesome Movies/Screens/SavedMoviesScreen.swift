@@ -84,3 +84,9 @@ struct SavedMoviesScreen: View {
     SavedMoviesScreen()
         .environment(\.managedObjectContext, CoreDataProvider.preview.context)
 }
+
+#Preview {
+    SavedMoviesScreen()
+        .environment(\.managedObjectContext, CoreDataProvider.preview.context)
+        .environment(\.locale, Locale(identifier: "sv"))
+}
