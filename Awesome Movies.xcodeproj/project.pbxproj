@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D91F3AAC2C089DF000E332DD /* AwesomeMovieAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D91F3AAA2C089DF000E332DD /* AwesomeMovieAppModel.xcdatamodeld */; };
 		D94F89452BFA7620008EAB3E /* Awesome_MoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F89442BFA7620008EAB3E /* Awesome_MoviesApp.swift */; };
 		D94F89492BFA7621008EAB3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94F89482BFA7621008EAB3E /* Assets.xcassets */; };
 		D94F894C2BFA7621008EAB3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94F894B2BFA7621008EAB3E /* Preview Assets.xcassets */; };
@@ -14,7 +15,6 @@
 		D94F895B2BFAA88B008EAB3E /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F895A2BFAA88B008EAB3E /* Movie.swift */; };
 		D94F895E2BFAABAE008EAB3E /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94F895D2BFAABAE008EAB3E /* MovieViewModel.swift */; };
 		D96135092C0359D800B0AB6D /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96135082C0359D800B0AB6D /* CoreDataProvider.swift */; };
-		D961350C2C035CB400B0AB6D /* AwesomeMovieAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D961350A2C035CB400B0AB6D /* AwesomeMovieAppModel.xcdatamodeld */; };
 		D961350E2C03663C00B0AB6D /* SavedMovie+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D961350D2C03663C00B0AB6D /* SavedMovie+Extension.swift */; };
 		D96135102C03BED000B0AB6D /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D961350F2C03BED000B0AB6D /* MainScreen.swift */; };
 		D96135142C03C0A600B0AB6D /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96135132C03C0A600B0AB6D /* SettingsScreen.swift */; };
@@ -37,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D91F3AAB2C089DF000E332DD /* AwesomeMovieAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AwesomeMovieAppModel.xcdatamodel; sourceTree = "<group>"; };
 		D94F89412BFA7620008EAB3E /* Awesome Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Awesome Movies.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94F89442BFA7620008EAB3E /* Awesome_MoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Awesome_MoviesApp.swift; sourceTree = "<group>"; };
 		D94F89482BFA7621008EAB3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -45,7 +46,6 @@
 		D94F895A2BFAA88B008EAB3E /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		D94F895D2BFAABAE008EAB3E /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		D96135082C0359D800B0AB6D /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
-		D961350B2C035CB400B0AB6D /* AwesomeMovieAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AwesomeMovieAppModel.xcdatamodel; sourceTree = "<group>"; };
 		D961350D2C03663C00B0AB6D /* SavedMovie+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedMovie+Extension.swift"; sourceTree = "<group>"; };
 		D961350F2C03BED000B0AB6D /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		D96135132C03C0A600B0AB6D /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				D96135082C0359D800B0AB6D /* CoreDataProvider.swift */,
-				D961350A2C035CB400B0AB6D /* AwesomeMovieAppModel.xcdatamodeld */,
+				D91F3AAA2C089DF000E332DD /* AwesomeMovieAppModel.xcdatamodeld */,
 			);
 			path = Coredata;
 			sourceTree = "<group>";
@@ -315,9 +315,9 @@
 				D9DEC34F2C01E24200944452 /* CircularRatingView.swift in Sources */,
 				D9DEC3512C0257B600944452 /* CustomBezierPathShape.swift in Sources */,
 				D94F895E2BFAABAE008EAB3E /* MovieViewModel.swift in Sources */,
-				D961350C2C035CB400B0AB6D /* AwesomeMovieAppModel.xcdatamodeld in Sources */,
 				D9DEC34A2C010EE800944452 /* MovieDetailScreen.swift in Sources */,
 				D97B58D82BFD40F200E57704 /* Constant.swift in Sources */,
+				D91F3AAC2C089DF000E332DD /* AwesomeMovieAppModel.xcdatamodeld in Sources */,
 				D96135102C03BED000B0AB6D /* MainScreen.swift in Sources */,
 				D97B58DC2BFD587500E57704 /* MovieGridItemView.swift in Sources */,
 				D9EA01FF2BFBD53200730562 /* QueryItem.swift in Sources */,
@@ -539,12 +539,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D961350A2C035CB400B0AB6D /* AwesomeMovieAppModel.xcdatamodeld */ = {
+		D91F3AAA2C089DF000E332DD /* AwesomeMovieAppModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D961350B2C035CB400B0AB6D /* AwesomeMovieAppModel.xcdatamodel */,
+				D91F3AAB2C089DF000E332DD /* AwesomeMovieAppModel.xcdatamodel */,
 			);
-			currentVersion = D961350B2C035CB400B0AB6D /* AwesomeMovieAppModel.xcdatamodel */;
+			currentVersion = D91F3AAB2C089DF000E332DD /* AwesomeMovieAppModel.xcdatamodel */;
 			name = AwesomeMovieAppModel.xcdatamodeld;
 			path = "/Users/khalidafridi/Documents/2023-SwiftUI Tutorials/Awesome Movies/Awesome Movies/Models/Coredata/AwesomeMovieAppModel.xcdatamodeld";
 			sourceTree = "<group>";
