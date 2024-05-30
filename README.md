@@ -38,9 +38,16 @@ Follow the instructions to register and get your Bearar token. https://developer
 fileprivate let beararToken: String = "Your bearar token here"
 ```
 
+
+
 ## Help
 
-If bearar token is not provided the app will crash with a fatalError message to console
+* There's some issue with xcode indexing if you download the project from github and try to run
+you might get error that the xcmodel is not available at the path. You can right click on the xcdatamodel show in finder from xcode remove the file reference drag and drop the xcmodel again to the project it will detect it.
+
+* After adding the model file again you can do shift+cmd+k which does a clean build and everything should work as expect
+
+* If bearar token is not provided the app will crash with a fatalError message to console
 
 
 ## Author
